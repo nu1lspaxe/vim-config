@@ -1,0 +1,18 @@
+{
+    "https.rejectUnauthorized": false,
+    "http.proxyStrictSSL": false,
+    "languageserver": {
+      "go": {
+        "command": "gopls",
+        "rootPatterns": ["go.mod"],
+        "trace.server": "verbose",
+        "filetypes": ["go"]
+      },
+      "pyrefly": {
+        "command": "pyrefly",
+        "args": ["lsp"],
+        "filetypes": ["python"],
+        "rootPatterns": ["pyrefly.toml", "pyproject.toml", ".git"]
+      }
+   }
+}
