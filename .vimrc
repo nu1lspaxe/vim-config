@@ -28,6 +28,8 @@ endif
 " =========================
 " Basic Settings
 " =========================
+set encoding=utf-8
+set fileencodings=utf-8,ucs-bom,big5,gbk
 syntax on
 set number
 set mouse=a
@@ -71,6 +73,10 @@ call plug#end()
 " NERDTree
 " =========================
 autocmd VimEnter * NERDTree 
+
+
+autocmd FileType go setlocal tabstop=4 shiftwidth=4 noexpandtab
+autocmd BufWritePre *.go :silent! call CocAction('format')
 
 " =========================
 " coc.nvim mappings
